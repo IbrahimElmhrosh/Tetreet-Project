@@ -12,11 +12,7 @@
         body {
             font-family: 'Noto Sans Arabic', sans-serif;
             background-color: #fafafa;
-            overflow-x: hidden; /* Fix for horizontal scroll */
-        }
-
-        .gold-gradient {
-            background: linear-gradient(135deg, #d4af37 0%, #b8962d 100%);
+            overflow-x: hidden;
         }
 
         .glass-nav {
@@ -39,36 +35,33 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <!-- Logo Section -->
             <div class="flex items-center">
                 <a href="#home">
-                    <!-- Increased logo height from h-12 to h-20/h-24 for better visibility -->
-                    <img src="img\Logo.png" alt="Tetreet Logo" class="h-16 md:h-24 w-auto object-contain">
+                    <img src="img/Logo.png" alt="Tetreet Logo" class="h-16 md:h-24 w-auto object-contain">
                 </a>
             </div>
 
-            <!-- Desktop Links -->
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#home" class="hover:text-[#d4af37] transition-colors">الرئيسية</a>
                 <a href="#about" class="hover:text-[#d4af37] transition-colors">من نحن</a>
                 <a href="#categories" class="hover:text-[#d4af37] transition-colors">منتجاتنا</a>
+                <a href="#legal" class="hover:text-[#d4af37] transition-colors">معلومات قانونية</a>
                 <a href="tel:0925651510" class="bg-[#d4af37] text-white px-6 py-2 rounded-full hover:bg-[#b8962d] transition-all flex items-center gap-2 shadow-md">
                     <i data-lucide="phone" class="w-4 h-4"></i>
                     <span>اتصل الآن</span>
                 </a>
             </div>
 
-            <!-- Mobile Toggle -->
             <button class="md:hidden" onclick="toggleMenu()">
                 <i data-lucide="menu" id="menu-icon"></i>
             </button>
         </div>
         
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 flex flex-col gap-4 shadow-xl">
             <a href="#home" class="py-2 border-b border-gray-50" onclick="toggleMenu()">الرئيسية</a>
             <a href="#about" class="py-2 border-b border-gray-50" onclick="toggleMenu()">من نحن</a>
             <a href="#categories" class="py-2 border-b border-gray-50" onclick="toggleMenu()">منتجاتنا</a>
+            <a href="#legal" class="py-2 border-b border-gray-50" onclick="toggleMenu()">معلومات قانونية</a>
             <a href="tel:0925651510" class="text-[#d4af37] font-bold py-2">اتصل بنا: 0925651510</a>
         </div>
     </nav>
@@ -76,8 +69,7 @@
     <!-- Hero Section -->
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="img\img2.jpeg" 
-                 class="w-full h-full object-cover" alt="Interior">
+            <img src="img/img2.jpeg" class="w-full h-full object-cover" alt="Interior">
             <div class="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
         </div>
 
@@ -141,10 +133,8 @@
                 </ul>
             </div>
             <div class="lg:w-1/2 relative">
-                <!-- Added overflow-visible to container and checked sizing to prevent horizontal scroll from the negative left-10 border -->
                 <div class="absolute -z-10 top-10 -left-6 md:-left-10 w-full h-full border-2 border-[#d4af37] rounded-2xl"></div>
-                <img src="img\img1.jpeg" 
-                     alt="Luxury Decor" class="rounded-2xl shadow-2xl w-full h-[500px] object-cover">
+                <img src="img/img1.jpeg" alt="Luxury Decor" class="rounded-2xl shadow-2xl w-full h-[500px] object-cover">
             </div>
         </div>
     </section>
@@ -161,7 +151,6 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Category 1 -->
                 <div class="group relative p-10 rounded-[2rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/50 transition-all duration-500 overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-[#d4af37] scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-500"></div>
                     <div class="text-[#d4af37] mb-8 bg-white/5 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-[#d4af37] group-hover:text-white transition-all duration-500">
@@ -170,7 +159,6 @@
                     <h3 class="text-2xl font-bold mb-4">أدوات التقديم</h3>
                     <p class="text-gray-400 text-lg leading-relaxed">أناقة تليق بضيوفك وتجمل مائدتك</p>
                 </div>
-                <!-- Category 2 -->
                 <div class="group relative p-10 rounded-[2rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/50 transition-all duration-500 overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-[#d4af37] scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-500"></div>
                     <div class="text-[#d4af37] mb-8 bg-white/5 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-[#d4af37] group-hover:text-white transition-all duration-500">
@@ -179,7 +167,6 @@
                     <h3 class="text-2xl font-bold mb-4">التحف النادرة</h3>
                     <p class="text-gray-400 text-lg leading-relaxed">قطع حصرية مختارة بعناية</p>
                 </div>
-                <!-- Category 3 -->
                 <div class="group relative p-10 rounded-[2rem] bg-white/5 border border-white/10 hover:border-[#d4af37]/50 transition-all duration-500 overflow-hidden">
                     <div class="absolute top-0 left-0 w-full h-1 bg-[#d4af37] scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-500"></div>
                     <div class="text-[#d4af37] mb-8 bg-white/5 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:bg-[#d4af37] group-hover:text-white transition-all duration-500">
@@ -193,7 +180,7 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-32 text-center bg-[#fafafa]">
+    <section id="cta" class="py-32 text-center bg-[#fafafa]">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold mb-8">هل تبحث عن التميز؟</h2>
             <p class="text-xl text-gray-500 mb-12 italic">"تيتريت.. حيث يلتقي الفن بالاستخدام اليومي"</p>
@@ -209,14 +196,55 @@
         </div>
     </section>
 
+    <!-- Legal Info Section - Moved here as requested -->
+    <section id="legal" class="py-20 bg-white border-t border-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold">البيانات القانونية والاعتمادات</h3>
+                <div class="w-20 h-1 bg-[#d4af37] mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tax Info -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-[#d4af37] font-bold mb-2">الرقم الضريبي</h4>
+                    <p class="text-gray-700 font-mono tracking-wider">000-000-000</p>
+                </div>
+                <!-- License Info -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-[#d4af37] font-bold mb-2">رقم الترخيص</h4>
+                    <p class="text-gray-700 font-mono tracking-wider">TR-12345678</p>
+                </div>
+                <!-- Commercial Register -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-[#d4af37] font-bold mb-2">السجل التجاري</h4>
+                    <p class="text-gray-700 font-mono tracking-wider">REG-987654</p>
+                </div>
+                <!-- Chamber of Commerce -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-[#d4af37] font-bold mb-2">غرفة التجارة</h4>
+                    <p class="text-gray-700 font-mono tracking-wider">CH-554433</p>
+                </div>
+                <!-- Industrial Register -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-[#d4af37] font-bold mb-2">السجل الصناعي</h4>
+                    <p class="text-gray-700 font-mono tracking-wider">IND-221100</p>
+                </div>
+                <!-- Investment Register -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow">
+                    <h4 class="text-[#d4af37] font-bold mb-2">سجل أستثماري</h4>
+                    <p class="text-gray-700 font-mono tracking-wider">INV-778899</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-white py-16 border-t border-gray-100 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-10">
                 <div class="text-center md:text-right">
-                    <!-- Footer Logo - Also Increased -->
                     <div class="flex items-center justify-center md:justify-start">
-                        <img src="img\Logo.png" alt="Tetreet Logo" class="h-16 w-auto object-contain">
+                        <img src="img/Logo.png" alt="Tetreet Logo" class="h-16 w-auto object-contain">
                     </div>
                     <p class="mt-4 text-gray-400 max-w-xs">الشركة الرائدة في استيراد أرقى التحف والمواد المنزلية في حي الأندلس.</p>
                 </div>
@@ -233,10 +261,7 @@
     </footer>
 
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
-
-        // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
         window.onscroll = function() {
             if (window.pageYOffset > 50) {
@@ -248,13 +273,10 @@
             }
         };
 
-        // Mobile Menu Toggle
         function toggleMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('menu-icon');
             menu.classList.toggle('hidden');
-            
-            // Swap icon
             if(menu.classList.contains('hidden')) {
                 icon.setAttribute('data-lucide', 'menu');
             } else {
@@ -265,5 +287,3 @@
     </script>
 </body>
 </html>
-
-
